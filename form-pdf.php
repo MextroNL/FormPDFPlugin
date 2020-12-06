@@ -8,11 +8,44 @@
  * Author URI: https://www.mextro.nl
  */
 
-function input_field(){
-    return '<input class';
-}
-add_shortcode('input', 'input_field');
+//function input_field(){
+//    return '<input class';
+//}
+//add_shortcode('input', 'input_field');
 
 
 define('ROOTDIR', plugin_dir_path(__FILE__));
-require_once(ROOTDIR . 'global/createDB.php');
+require_once(ROOTDIR . 'createDB.php');
+
+register_activation_hook( __FILE__, 'createTables' );
+register_activation_hook( __FILE__, 'firstRow' );
+
+
+
+//define ( 'FormPDFPlugin', __FILE__ );
+//
+//class FormPDF{
+//
+//    public function __construct()
+//    {
+//        RisiriWarehouseManagement::includes();
+//        define( 'FormPDF', plugin_basename(
+//            FormPDF ) );
+//        ddefine('ROOTDIR', plugin_dir_path(__FILE__));
+//
+//        createDB::createTables();
+//
+//
+//    }
+//
+//    public function includes()
+//    {
+//        require_once(ROOTDIR . 'classes/global/createDB.php');
+//
+//
+//    }
+//}
+//
+//
+//$RisiriWarehouseManagement = new RisiriWarehouseManagement();
+//?>
