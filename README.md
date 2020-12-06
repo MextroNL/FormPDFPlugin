@@ -1,1 +1,1 @@
-form-pdf
+A wordpress plugin that adds in customizable forms through shortcodes that write to the database, can be displayed on the website and is convertible to PDF.
