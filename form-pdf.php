@@ -7,3 +7,12 @@
  * Author: Mextro
  * Author URI: https://www.mextro.nl
  */
+
+function input_field(){
+    return '<input class';
+}
+add_shortcode('input', 'input_field');
+
+
+define('ROOTDIR', plugin_dir_path(__FILE__));
+require_once(ROOTDIR . 'global/createDB.php');
